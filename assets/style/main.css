@@ -37,14 +37,48 @@
 /* if logged - begin */
 .header__control__login__wrapper,
 .header__control__login__admin{
-    font-size: 2rem;
-    color: var(--white-color);
+    font-size: 1.8rem;
+    color: var(--text-color);
     cursor: pointer;
     text-decoration: none;
+    padding: 1rem 1rem;
+    display: block;
+
+}
+
+.header__control__login:hover .header__control__login__extra{
+    display: block;
+}
+
+.header__control__login__wrapper:hover{
+    color: blueviolet;
 }
 
 .header__control__login__admin:hover{
     color: blueviolet;
+}
+
+.header__control__login{
+    position: relative;
+}
+
+.header__control__login__extra{
+    position: absolute;
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 5px #333;
+    top: 4.4rem;
+    display: none;
+    z-index: 5;
+}
+
+.header__control__login__extra::before{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1rem;
+    z-index: 0;
+    top: -10px;
 }
 /* if logged - end*/
 

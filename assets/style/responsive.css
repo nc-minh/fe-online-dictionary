@@ -96,10 +96,10 @@
 }
 
 /* testing */
-/* .header__control{
-    display: none;
-} */
-
-.header__control__login{
+.header__control{
     display: none;
 }
+
+/* .header__control__login{
+    display: none;
+} */
