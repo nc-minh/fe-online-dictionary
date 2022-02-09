@@ -6,8 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style/base.css">
+    <link rel="stylesheet" href="./assets/style/main.css">
+    <link rel="stylesheet" href="./assets/style/responsive.css">
 </head>
 <body>
-    <h1>alo</h1>
+    <div id="app">
+        <!-- header begin -->
+        <header class="header">
+            <div class="mw1200 header__wrapper">
+                <div class="header__logo">
+                    <a class="header__logo--link" href="/">
+                        <i class="fa-solid fa-spell-check"></i>
+                        <span>Từ Điển</span>
+                    </a>
+                </div>
+    
+                <div class="header__control">
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng nhập</a>
+                    </div>
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng ký</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- body begin -->
+        <main class="content mw1200">
+            <div class="content__name">
+                <i class="fab fa-angellist"></i>
+                <span>Dictionary</span>
+            </div>
+
+            <div class="content__search">
+                <input type="text" name="" id="" class="content__search__input">
+                <button class="content__search__btn">Tra từ</button>
+            </div>
+
+            <div class="content__introduce">
+                <h2 class="content__introduce__title">Online Dictionary</h2>
+                <ul class="content__introduce__list">
+                    <li class="content__introduce__item">
+                        Từ điển trực tuyến miễn phí cho người Việt.
+                    </li>
+                    <li class="content__introduce__item">
+                        Cung cấp 2 bộ từ điển chính: Anh – Việt, Việt – Anh và Anh – Anh
+                    </li>
+                    <li class="content__introduce__item">
+                        Kho từ đồ sộ cùng hệ thống gợi ý từ thông minh, Laban Dictionary giúp tra cứu nhanh chóng nhất.
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <!-- body end -->
+    </div>
 </body>
 </html>

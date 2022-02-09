@@ -10,6 +10,8 @@
 
 * {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -17,4 +19,9 @@ html {
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+.mw1200{
+    max-width: 1200px;
+    margin: auto;
 }

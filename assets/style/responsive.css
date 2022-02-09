@@ -1,0 +1,6 @@
+/* tablet */
+@media (max-width: 1230px){
+    .header__wrapper{
+        margin: 0 2rem;
+    }
+}
