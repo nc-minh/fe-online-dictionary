@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+</head>
+<body>
+    <div id="app">
+        <!-- header begin -->
+        <header class="header">
+            <div class="mw1200 header__wrapper">
+                <div class="header__logo">
+                    <a class="header__logo--link" href="/">
+                        <i class="fa-solid fa-spell-check"></i>
+                        <span>Từ Điển</span>
+                    </a>
+                </div>
+    
+                <div class="header__control">
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng nhập</a>
+                    </div>
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng ký</a>
+                    </div>
+                </div>
+
+                <!-- if you logged -->
+                <div class="header__control__login">
+                    <a href="/" class="header__control__login__wrapper">
+                        <i class="far fa-user"></i>
+                        <span class="header__control__login--user">nc-minh</span>
+                    </a>
+                    
+
+                    <div class="header__control__login__extra">
+                        <a href="/" class="header__control__login__admin">
+                            <span class="header__control__login--admin">Đăng xuất</span>
+                        </a>
+                        <!-- if you are an admin -->
+                        <a href="../pages/admin.html" class="header__control__login__admin">
+                            <i class="fas fa-tools"></i>
+                            <span class="header__control__login--admin">Admin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- body begin -->
+        <main class="content mw1200">
+            <div class="content__name">
+                <i class="fab fa-angellist"></i>
+                <h1>Dictionary</h1>
+            </div>
+
+            <div class="content__api">
+                <div class="content__api__wrapper">
+                    <div class="content__api__wrapper__name">API: </div>
+                    <div id="api" class="padding">https://jsonplaceholder.typicode.com/posts</div>
+                    <button class="content__api__wrapper__btn" onclick="CopyToClipboard('api')">Copy</button>
+                </div>
+
+                <div class="content__api__wrapper">
+                    <div class="content__api__wrapper__name">Cách dùng </div>
+                    <pre class="content__api__link">
+                        <code id="code">
+var myHeaders = new Headers();
+myHeaders.append(
+    "Content-Type",
+ "application/json"
+);
+
+fetch("/posts", {
+    method: 'POST',
+    headers: myHeaders,
+    body: JSON.stringify({
+        "word": "hello"
+        }),
+    redirect: 'follow'
+})
+.then(response 
+=> 
+response.text())
+.then(result 
+=> 
+console.log(result))
+.catch(error 
+=> 
+console.log('error', error));
+                        </code>
+                    </pre>
+                    <button class="content__api__wrapper__btn" onclick="CopyToClipboard('code')">Copy</button>
+                </div>
+
+                <div class="content__api__wrapper">
+                    <input type="text" name="" id="" class="content__api__wrapper__input" placeholder="Nhập từ muốn tra để test api">
+                    <button class="content__api__wrapper__btn">Test</button>
+                </div>
+
+                <div class="content__api__wrapper">
+                    <p class="content__api__wrapper__result">{
+                        "word": "hello",
+                        "mean": "Xin chào"
+                    }</p>
+                </div>
+                
+            </div>
+        </main>
+        <!-- body end -->
+
+        <!-- footer begin -->
+        <footer class="footer">
+            <div class="mw1200 footer__wrapper">
+                <div class="footer__list">
+                    <div class="footer__item">
+                        <a href="/" class="footer__item--link">
+                            <i class="fa-solid fa-spell-check"></i>
+                            <span>Từ Điển</span>
+                        </a>
+                    </div>
+                    <div class="footer__item footer__item__rela">
+                        <a href="/" class="footer__item--link">API</a>
+                    </div>
+                </div>
+    
+                <div class="footer__copyright">Copyright &copy; Dictionary</div>
+            </div>
+        </footer>
+        <!-- footer end -->
+    </div>
+    <script>
+        function CopyToClipboard(id){
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+</html>
