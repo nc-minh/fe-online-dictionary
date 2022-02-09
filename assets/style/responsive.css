@@ -20,6 +20,12 @@
     .content__result{
         margin-top: 5rem;
     }
+
+    .content__register{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
 }
 
 /* mobile */

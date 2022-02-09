@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dictionary</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/style/base.css">
-    <link rel="stylesheet" href="./assets/style/main.css">
-    <link rel="stylesheet" href="./assets/style/responsive.css">
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/responsive.css">
 </head>
 <body>
     <div id="app">
@@ -24,10 +24,10 @@
     
                 <div class="header__control">
                     <div class="header__control__item">
-                        <a href="/assets/pages/login.html" class="header__control__item--link">Đăng nhập</a>
+                        <a href="" class="header__control__item--link">Đăng nhập</a>
                     </div>
                     <div class="header__control__item">
-                        <a href="assets/pages/register.html" class="header__control__item--link">Đăng ký</a>
+                        <a href="" class="header__control__item--link">Đăng ký</a>
                     </div>
                 </div>
             </div>
@@ -41,37 +41,18 @@
                 <h1>Dictionary</h1>
             </div>
 
-            <div class="content__search">
-                <input type="text" name="" id="" class="content__search__input" placeholder="search...">
-                <select class="content__search__select" name="" id="">
-                    <option class="content__search__select__item" value="en">Anh - Việt</option>
-                    <option class="content__search__select__item" value="vi">Việt - Anh</option>
-                </select>
-                <button class="content__search__btn">Tra từ</button>
-            </div>
-
-            <div class="mb--content__search">
-                <input type="text" name="" id="" class="content__search__input" placeholder="search...">
-                <select class="content__search__select" name="" id="">
-                    <option class="content__search__select__item" value="en">Anh - Việt</option>
-                    <option class="content__search__select__item" value="vi">Việt - Anh</option>
-                </select>
-                <button class="content__search__btn">Tra từ</button>
-            </div>
-
-            <div class="content__introduce">
-                <h2 class="content__introduce__title">Online Dictionary</h2>
-                <ul class="content__introduce__list">
-                    <li class="content__introduce__item">
-                        Từ điển trực tuyến miễn phí cho người Việt.
-                    </li>
-                    <li class="content__introduce__item">
-                        Cung cấp 2 bộ từ điển chính: Anh – Việt, Việt – Anh và Anh – Anh
-                    </li>
-                    <li class="content__introduce__item">
-                        Kho từ đồ sộ cùng hệ thống gợi ý từ thông minh, Laban Dictionary giúp tra cứu nhanh chóng nhất.
-                    </li>
-                </ul>
+            <div class="content__register">
+                <h2 class="content__register__title">Sign Up</h2>
+                <div class="content__register__form">
+                    <input type="text" name="" id="" class="content__register__form__item" placeholder="Username*">
+                    <p class="content__register__form__item--alert">*Tên tài khoản đã tồn tại</p>
+                    <input type="text" name="" id="" class="content__register__form__item" placeholder="Password*">
+                    <p class="content__register__form__item--alert">*Mật khẩu phải lớn hơn 5 kí tự</p>
+                    <input type="text" name="" id="" class="content__register__form__item" placeholder="Re-Password*">
+                    <p class="content__register__form__item--alert">*Mật khẩu nhập lại sai</p>
+                </div>
+                <button class="content__register__btn">Sign Up</button>
+                <a href="./login.html" class="content__register__toLogin">Have an account already?</a>
             </div>
         </main>
         <!-- body end -->

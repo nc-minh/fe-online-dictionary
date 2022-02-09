@@ -239,3 +239,63 @@
     color: var(--primary-color);
 }
 /* result page - end */
+
+/* register page - begin */
+.content__register{
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+}
+
+.content__register__title{
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content__register__form__item{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: .5rem 0;
+    border-radius: .5rem;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+    background-color: antiquewhite;
+}
+
+.content__register__form__item--alert{
+    color: #ff0000;
+    font-size: 1.2rem;
+    display: none;
+}
+
+.content__register__form__item:focus{
+    border: 1px solid saddlebrown;
+    box-shadow: 0 0 5px saddlebrown;
+}
+
+.content__register__btn{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: .5rem 0;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    font-size: 2rem;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.content__register__btn:hover{
+    background-color: var(--primary-color-hover);
+}
+
+.content__register__toLogin{
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+/* register page - end */
