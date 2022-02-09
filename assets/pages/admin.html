@@ -77,15 +77,44 @@
             </nav>
 
             <div class="content__admin">
-                <div id="admin-add" class="content__admin__add">
+                <form action="" method="get" id="admin-add" class="content__admin__add">
                     <select class="content__admin__add__select" name="" id="">
-                        <option value="en">Anh - Việt</option>
-                        <option value="vi">Việt - Anh</option>
+                        <option value="en-vi" selected>Anh - Việt</option>
+                        <option value="vi-en">Việt - Anh</option>
+                        <option value="en-jp">Anh - Nhật</option>
+                        <option value="jp-en">Nhật - Anh</option>
+                        <option value="jp-vn">Nhật - Việt</option>
+                        <option value="vn-jp">Việt - Nhật</option>
                     </select>
-                    <input type="text" name="" id="" class="content__admin__add__input" placeholder="Từ mới">
-                    <input type="text" name="" id="" class="content__admin__add__input" placeholder="Phiên âm">
-                    <input type="text" name="" id="" class="content__admin__add__input" placeholder="Nghĩa của từ">
-                    <button class="content__admin__add__btn">Thêm</button>
+                    <div class="flex space-between w-full">
+                        <input type="text" name="" id="" class="content__admin__add__input mr-20" placeholder="Từ mới">
+                        <input type="text" name="" id="" class="content__admin__add__input " placeholder="Phiên âm">
+                    </div>
+                    
+
+                    <div class="flex space-between w-full">
+                        <input type="text" name="" id="" class="content__admin__add__input mr-20" placeholder="Nghĩa của từ">
+                        <select class="content__admin__add__select" name="" id="" style="margin-top: 1rem;">
+                            <option value="noun" selected>Danh từ</option>
+                            <option value="verb">Động từ</option>
+                            <option value="adjective">Tính từ</option>
+                            <option value="adverb">Trạng từ</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mt-20 mb-10">
+                        <span class="content__admin__add__btn content__admin__button-add" onclick="addExample()">Thêm câu ví dụ</span>
+                    </div>
+                    <div class="w-full" id="wrapper_sentence">
+                        <div class="flex space-between w-full">
+                            <input type="text" name="sentence" id="" class="content__admin__add__input mr-20" placeholder="Câu">
+                            <input type="text" name="sentence_meaning" id="" class="content__admin__add__input " placeholder="Dịch nghĩa câu">
+                            <div class="btn_admin-remove" onclick="removeExample(this)">✕</div>
+                            <div class="btn_admin-remove btn_admin-add" onclick="addExample()">&plus;</div>
+                        </div>
+                        
+                    </div>
+                    <button class="content__admin__add__btn">Lưu lại</button>
                 </div>
 
                 <!-- list -->
@@ -146,10 +175,10 @@
         <!-- footer end -->
         <script>
             function wordList(){
-                const wordList = document.getElementById('word-list')
-                const addWord = document.getElementById('add-word')
-                const adminAdd = document.getElementById('admin-add')
-                const adminList = document.getElementById('admin-list')
+                var wordList = document.getElementById('word-list')
+                var addWord = document.getElementById('add-word')
+                var adminAdd = document.getElementById('admin-add')
+                var adminList = document.getElementById('admin-list')
 
                 adminAdd.style.display = 'none'
                 adminList.style.display = 'block'
@@ -158,15 +187,34 @@
             }
 
             function add(){
-                const wordList = document.getElementById('word-list')
-                const adminAdd = document.getElementById('admin-add')
-                const addWord = document.getElementById('add-word')
-                const adminList = document.getElementById('admin-list')
+                var wordList = document.getElementById('word-list')
+                var adminAdd = document.getElementById('admin-add')
+                var addWord = document.getElementById('add-word')
+                var adminList = document.getElementById('admin-list')
 
                 adminAdd.style.display = 'block'
                 adminList.style.display = 'none'
                 addWord.classList.add('active')
                 wordList.classList.remove('active')
+            }
+
+            function addExample() {
+                var wrapper = document.getElementById('wrapper_sentence')
+                
+                var div = document.createElement('div')
+                div.className = 'flex space-between w-full'
+                div.innerHTML = `
+                    <input type="text" name="sentence" id="" class="content__admin__add__input mr-20" placeholder="Câu">
+                    <input type="text" name="sentence_meaning" id="" class="content__admin__add__input " placeholder="Dịch nghĩa câu">
+                    <div class="btn_admin-remove" onclick="removeExample(this)">✕</div>
+                    <div class="btn_admin-remove btn_admin-add" onclick="addExample()">&plus;</div>
+                `
+                wrapper.appendChild(div)
+            }
+
+            function removeExample(e) {
+                var wrapper = document.getElementById('wrapper_sentence')
+                wrapper.removeChild(e.parentElement)
             }
         </script>
     </div>
