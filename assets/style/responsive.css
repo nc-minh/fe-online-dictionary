@@ -39,3 +39,34 @@
         width: 100%;
     }
 }
+
+/* mobile */
+@media (max-width: 385px){
+    .header__logo--link{
+        font-size: 2rem;
+    }
+
+    .header__control__item{
+        margin-left: .5rem;
+    }
+
+    .header__control__item--link{
+        font-size: 1.6rem;
+    }
+    
+    .content__introduce__item{
+        line-height: 2rem;
+    }
+    
+    .footer__item{
+        margin-right: 1rem;
+    }
+    
+    .footer__item--link{
+        font-size: 1.8rem;
+    }
+
+    .footer__copyright{
+        font-size: 1.2rem;
+    }
+}
