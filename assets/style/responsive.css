@@ -46,6 +46,10 @@
     .content__introduce{
         margin-top: 5rem;
     }
+
+    .content__name{
+        padding: 5rem 0;
+    }
 }
 
 /* mobile */
