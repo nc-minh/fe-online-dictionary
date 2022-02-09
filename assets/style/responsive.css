@@ -1,11 +1,12 @@
 /* tablet */
 @media (max-width: 1230px){
-    .header__wrapper{
-        margin: 0 2rem;
-    }
-
+    .header__wrapper,
     .footer__wrapper{
         margin: 0 2rem;
+    }
+    
+    .content__result{
+        width: 90%;
     }
 }
 
@@ -14,6 +15,10 @@
     .content__search{
         width: auto;
         margin: 0 1rem;
+    }
+    
+    .content__result{
+        margin-top: 5rem;
     }
 }
 
