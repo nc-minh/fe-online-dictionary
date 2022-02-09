@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/responsive.css">
+    <style>
+        .header__control{
+            display: none;
+        }
+
+        .header__control__login{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- header begin -->
+        <header class="header">
+            <div class="mw1200 header__wrapper">
+                <div class="header__logo">
+                    <a class="header__logo--link" href="/">
+                        <i class="fa-solid fa-spell-check"></i>
+                        <span>Từ Điển</span>
+                    </a>
+                </div>
+    
+                <div class="header__control">
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng nhập</a>
+                    </div>
+                    <div class="header__control__item">
+                        <a href="" class="header__control__item--link">Đăng ký</a>
+                    </div>
+                </div>
+
+                <!-- if you logged -->
+                <div class="header__control__login">
+                    <a href="/" class="header__control__login__wrapper">
+                        <i class="far fa-user"></i>
+                        <span class="header__control__login--user">nc-minh</span>
+                    </a>
+                    <!-- if you are an admin -->
+                    <a href="admin.html" class="header__control__login__admin">
+                        <i class="fas fa-tools"></i>
+                        <span class="header__control__login--admin">admin</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- body begin -->
+        <main class="content mw1200">
+            <div class="content__name">
+                <i class="fab fa-angellist"></i>
+                <h1>Dictionary</h1>
+            </div>
+
+            <nav class="content__header">
+                <div id="add-word" class="content__header__item active" onclick="add()">Thêm từ</div>
+                <div id="word-list" class="content__header__item" onclick="wordList()">Danh sách từ</div>
+            </nav>
+
+            <div class="content__admin">
+                <div id="admin-add" class="content__admin__add">
+                    <select class="content__admin__add__select" name="" id="">
+                        <option value="en">Anh - Việt</option>
+                        <option value="vi">Việt - Anh</option>
+                    </select>
+                    <input type="text" name="" id="" class="content__admin__add__input" placeholder="Từ mới">
+                    <input type="text" name="" id="" class="content__admin__add__input" placeholder="Nghĩa của từ">
+                    <button class="content__admin__add__btn">Thêm</button>
+                </div>
+
+                <!-- list -->
+                <div id="admin-list" class="content__admin__list">
+                    <ul class="content__admin__list-word">
+                        <li class="content__admin__item-word">
+                            <a href="/" class="content__admin__word--link">Hello</a>
+                            <div class="content__admin__item__wrapper">
+                                <a href="" class="content__admin__word--delete">Sửa</a>
+                                <a href="" class="content__admin__word--repair">Xóa</a>
+                            </div>
+                        </li>
+                        <li class="content__admin__item-word">
+                            <a href="/" class="content__admin__word--link">hi</a>
+                            <div class="content__admin__item__wrapper">
+                                <a href="" class="content__admin__word--delete">Sửa</a>
+                                <a href="" class="content__admin__word--repair">Xóa</a>
+                            </div>
+                        </li>
+                        <li class="content__admin__item-word">
+                            <a href="/" class="content__admin__word--link">class</a>
+                            <div class="content__admin__item__wrapper">
+                                <a href="" class="content__admin__word--delete">Sửa</a>
+                                <a href="" class="content__admin__word--repair">Xóa</a>
+                            </div>
+                        </li>
+                        <li class="content__admin__item-word">
+                            <a href="/" class="content__admin__word--link">love</a>
+                            <div class="content__admin__item__wrapper">
+                                <a href="" class="content__admin__word--delete">Sửa</a>
+                                <a href="" class="content__admin__word--repair">Xóa</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <!-- body end -->
+
+        <!-- footer begin -->
+        <footer class="footer">
+            <div class="mw1200 footer__wrapper">
+                <div class="footer__list">
+                    <div class="footer__item">
+                        <a href="/" class="footer__item--link">
+                            <i class="fa-solid fa-spell-check"></i>
+                            <span>Từ Điển</span>
+                        </a>
+                    </div>
+                    <div class="footer__item footer__item__rela">
+                        <a href="/" class="footer__item--link">API</a>
+                    </div>
+                </div>
+    
+                <div class="footer__copyright">Copyright &copy; Dictionary</div>
+            </div>
+        </footer>
+        <!-- footer end -->
+        <script>
+            function wordList(){
+                const wordList = document.getElementById('word-list')
+                const addWord = document.getElementById('add-word')
+                const adminAdd = document.getElementById('admin-add')
+                const adminList = document.getElementById('admin-list')
+
+                adminAdd.style.display = 'none'
+                adminList.style.display = 'block'
+                wordList.classList.add('active')
+                addWord.classList.remove('active')
+            }
+
+            function add(){
+                const wordList = document.getElementById('word-list')
+                const adminAdd = document.getElementById('admin-add')
+                const addWord = document.getElementById('add-word')
+                const adminList = document.getElementById('admin-list')
+
+                adminAdd.style.display = 'block'
+                adminList.style.display = 'none'
+                addWord.classList.add('active')
+                wordList.classList.remove('active')
+            }
+        </script>
+    </div>
+</body>
+</html>

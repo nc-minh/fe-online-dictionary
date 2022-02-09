@@ -34,6 +34,20 @@
     color: aquamarine;
 }
 
+/* if logged - begin */
+.header__control__login__wrapper,
+.header__control__login__admin{
+    font-size: 2rem;
+    color: var(--white-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__control__login__admin:hover{
+    color: blueviolet;
+}
+/* if logged - end*/
+
 .content{
     display: flex;
     flex-direction: column;
@@ -299,3 +313,95 @@
     margin-top: 2rem;
 }
 /* register page - end */
+
+/* admin page - begin */
+.content__header{
+    display: flex;
+}
+
+.content__header__item{
+    padding: 1rem 2rem;
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 5px
+}
+
+.active{
+    background-color: var(--primary-color-hover);
+}
+
+.content__header__item:hover{
+    background-color: var(--primary-color-hover);
+}
+
+.content__admin{
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.content__admin__add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+}
+
+.content__admin__add__select{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.content__admin__add__input{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+.content__admin__add__btn{
+    padding: .5rem 1rem;
+    font-size: 1.8rem;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--white-color);
+    width: 10rem;
+}
+
+.content__admin__list{
+    display: none;
+}
+
+.content__admin__item-word{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid saddlebrown;
+}
+
+.content__admin__word--link{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.content__admin__item__wrapper a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.content__admin__item__wrapper a:hover,
+.content__admin__word--link:hover{
+    color: var(--primary-color);
+}
+/* admin page - end */

@@ -8,6 +8,10 @@
     .content__result{
         width: 90%;
     }
+
+    .content__admin{
+        width: 90%;
+    }
 }
 
 /* mobile */
@@ -25,6 +29,10 @@
         display: flex;
         flex-direction: column;
         width: 90%;
+    }
+    
+    .content__introduce{
+        margin-top: 5rem;
     }
 }
 
@@ -80,4 +88,18 @@
     .footer__copyright{
         font-size: 1.2rem;
     }
+
+    .header__control__login__wrapper,
+    .header__control__login__admin{
+        font-size: 1.6rem;
+    }
+}
+
+/* testing */
+/* .header__control{
+    display: none;
+} */
+
+.header__control__login{
+    display: none;
 }
