@@ -45,12 +45,12 @@
             <div class="content__register">
                 <h2 class="content__register__title">Log in with your username</h2>
                 <div class="content__register__form">
-                    <input type="text" name="" id="" class="content__register__form__item" placeholder="Username*">
-                    <p class="content__register__form__item--alert">*Tên tài khoản đã tồn tại</p>
-                    <input type="text" name="" id="" class="content__register__form__item" placeholder="Password*">
-                    <p class="content__register__form__item--alert">*Mật khẩu sai xin mời nhập lại</p>
+                    <input type="text" name="username" id="username" class="content__register__form__item" placeholder="Username*">
+                    <p id="alert-username" class="content__register__form__item--alert">*Tên tài khoản đã tồn tại</p>
+                    <input type="password" name="password" id="password" class="content__register__form__item" placeholder="Password*">
+                    <p id="alert-password" class="content__register__form__item--alert">*Mật khẩu sai xin mời nhập lại</p>
                 </div>
-                <button class="content__register__btn">Login</button>
+                <button class="content__register__btn" onclick="checkLogin()">Login</button>
                 <a href="./register.html" class="content__register__toLogin">Don't have an account yet?</a>
             </div>
         </main>
@@ -76,5 +76,6 @@
         </footer>
         <!-- footer end -->
     </div>
+    <script src="../js/main.js"></script>
 </body>
 </html>
